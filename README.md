@@ -1,4 +1,4 @@
-# QualitySurveyVis
+# Reweighter: Interactive Reweighting for Biased Training Data
 
 ## Install
 
