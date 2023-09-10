@@ -1,4 +1,4 @@
-# QualitySurveyVis
+# Reweighter: Interactive Reweighting for Biased Training Data
 
 ## Install
 
@@ -11,7 +11,7 @@ $ pip install -r requirements.txt
 
 3. Install nodejs package: check `README.md` under `vis` for more details.
 
-4. Download the data, unzip it, and put it in `flask/application/data`.
+4. Download the data ([link](https://drive.google.com/file/d/12db1lcp1GjG0ujCNE-nt-B5racen-pJ_/view?usp=sharing)), unzip it, and put it in `flask/application/data`.
 
 ## Run
 
