@@ -9,7 +9,7 @@ from sklearn.manifold import TSNE
 from sklearn.decomposition import PCA
 from umap import UMAP
 import numpy as np
-from application.views.LPV3 import LinearProgrammingV3, LinearProgrammingV4, LinearProgrammingV5
+from application.views.LP import LinearProgramming
 from application.views.coclustering import CoClustering
 from application.views.FACA import search_col, search_row, search
 import warnings
@@ -179,7 +179,7 @@ class DataLoader:
             lam[self.row_label==l] /= (self.row_label==l).sum()
         used_i = np.concatenate([self.pos_idx, self.neg_idx])
         used_col_index = self.col_index[used_i]
-        optimizer = LinearProgrammingV5(self.R[:, used_i], self.corrects[used_col_index], lam, self.labels[used_col_index], np.arange(len(self.pos_idx)), np.arange(len(self.pos_idx)+len(self.neg_idx)), (1,1,1), 1)
+        optimizer = LinearProgramming(self.R[:, used_i], self.corrects[used_col_index], lam, self.labels[used_col_index], np.arange(len(self.pos_idx)), np.arange(len(self.pos_idx)+len(self.neg_idx)), (1,1,1), 1)
         optimizer.set_lam_range(self.lam_lower, self.lam_upper)
         optimizer.set_active_goal(np.concatenate((self.up_idx, self.down_idx)), np.concatenate((np.ones(len(self.up_idx)), np.zeros(len(self.down_idx)))))
 
