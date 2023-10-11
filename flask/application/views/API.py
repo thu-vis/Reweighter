@@ -8,7 +8,6 @@ import numpy as np
 from application.views.utils.config_utils import config
 from application.views.data_loader import DataLoader
 from application.views.FACA import split_row, split_col, search_row, search_col
-from PIL import Image
 from io import BytesIO
 import warnings
 import hashlib

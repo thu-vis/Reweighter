@@ -7,7 +7,6 @@ from glob import glob
 from sklearn.cluster import KMeans
 from sklearn.manifold import TSNE
 from sklearn.decomposition import PCA
-from umap import UMAP
 import numpy as np
 from application.views.LP import LinearProgramming
 from application.views.coclustering import CoClustering
@@ -145,7 +144,7 @@ class DataLoader:
         new_col_cluster_label, col_map = DataLoader.reorder_by_score(col_cluster_label, self.labels[self.col_index])
         return new_row_cluster_label, new_col_cluster_label, col_map
 
-    def projection(self, features, n_dimensions=1, method='UMAP'):
+    def projection(self, features, n_dimensions=1, method='TSNE'):
         assert len(features.shape) == 2
         if features.shape[0] == 1:
             return np.array([0.5])
@@ -155,8 +154,7 @@ class DataLoader:
         with warnings.catch_warnings():
             # ignore all caught warnings
             warnings.filterwarnings("ignore")
-            if method == 'UMAP': projector = UMAP(n_components=n_dimensions, n_neighbors=2, random_state=0)
-            elif method == 'TSNE': projector = TSNE(n_components=n_dimensions, init='pca', learning_rate=500, random_state=0, perplexity=perplexity)
+            if method == 'TSNE': projector = TSNE(n_components=n_dimensions, init='pca', learning_rate=500, random_state=0, perplexity=perplexity)
             elif method == 'PCA': projector = PCA(n_components=n_dimensions, random_state=0)
             else: raise NotImplementedError('unknown projection method: ', method)
             X = projector.fit_transform(features)

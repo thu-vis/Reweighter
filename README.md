@@ -21,3 +21,6 @@ cd flask; flask run
 ```
 
 2. run frontend: check `README.md` under `vis` for more details.
+
+
+If you encounter any issues when using this library, please feel free to contact me vicayang496@gmail.com.
