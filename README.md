@@ -17,7 +17,7 @@ $ pip install -r requirements.txt
 
 1. run backend. 
 ```sh
-cd flask; flask run
+cd flask; python app.py
 ```
 
 2. run frontend: check `README.md` under `vis` for more details.
