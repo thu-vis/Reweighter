@@ -1,4 +1,12 @@
-# Reweighter: Interactive Reweighting for Biased Training Data
+# Reweighter: Interactive Reweighting for Mitigating Label Quality Issues
+
+## Install (Docker)
+
+To run the container:
+```sh
+docker push sudo docker run -p 49623:49623 -t -i vicayang/reweighter:latest /bin/bash /autorun.sh
+```
+Then open `http://localhost:49623/` in your browser.
 
 ## Install
 
@@ -6,7 +14,7 @@
 
 2. Install python package.
 ```sh
-$ pip install -r requirements.txt
+pip install -r requirements.txt
 ```
 
 3. Install nodejs package: check `README.md` under `vis` for more details.
