@@ -4,7 +4,7 @@
 
 To run the container:
 ```sh
-docker push sudo docker run -p 49623:49623 -t -i vicayang/reweighter:latest /bin/bash /autorun.sh
+docker push sudo docker run -p 49623:49623 -t vicayang/reweighter:latest /bin/bash /autorun.sh
 ```
 Then open `http://localhost:49623/` in your browser.
 
