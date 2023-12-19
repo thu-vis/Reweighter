@@ -8,6 +8,8 @@ sudo docker run -p 49623:49623 -t vicayang/reweighter:latest /bin/bash /autorun.
 ```
 Then open `http://localhost:49623/` in your browser.
 
+This should reproduce the Fig. 9 in our paper (Fig. 9 is slightly different from the screenshot because we adjust the aspect ratio and add some notations).
+
 ## Install
 
 1. This project uses [python 3.7](https://www.python.org/). Go check it out if you don't have it installed.
