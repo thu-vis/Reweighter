@@ -1,6 +1,8 @@
 # Reweighter: Interactive Reweighting for Mitigating Label Quality Issues
 
-## Install (Docker)
+ [![](https://www.replicabilitystamp.org/logo/Reproducibility-small.png)](http://www.replicabilitystamp.org#https-github-com-thu-vis-reweighter)
+
+## Install (Docker, medical dataset)
 
 To run the container:
 ```sh
@@ -10,7 +12,7 @@ Then open `http://localhost:49623/` in your browser.
 
 This should reproduce the Fig. 9 in our paper (Fig. 9 is slightly different from the screenshot because we adjust the aspect ratio and add some notations to make the figure more readable in the paper).
 
-## Install
+## Install (Cloth14 dataset)
 
 1. This project uses [python 3.7](https://www.python.org/). Go check it out if you don't have it installed.
 
